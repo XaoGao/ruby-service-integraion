@@ -6,6 +6,8 @@ ruby "3.2.2"
 
 gem "dry-monitor", "~> 1.0", ">= 1.0.1"
 gem "dry-system", "~> 1.0", ">= 1.0.1"
+gem "sequel", "~> 5.72"
+gem "sqlite3", "~> 1.6", ">= 1.6.4"
 
 group :development do
   gem "rubocop", "~> 1.56", ">= 1.56.2", require: false

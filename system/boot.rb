@@ -1,5 +1,5 @@
 require "rubygems"
-require "bundle/setup"
+require "bundler/setup"
 
 require_relative "container"
 require_relative "import"
