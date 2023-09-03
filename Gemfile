@@ -2,6 +2,9 @@
 
 source "https://rubygems.org"
 
+ruby "3.2.2"
+
+gem "dry-monitor", "~> 1.0", ">= 1.0.1"
 gem "dry-system", "~> 1.0", ">= 1.0.1"
 
 group :development do
