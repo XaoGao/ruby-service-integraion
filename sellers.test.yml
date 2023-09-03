@@ -1,0 +1,66 @@
+Sellers:
+  Seller:
+    - IsActive: 'true'
+      OutSystem:
+        X_Auth_Token: some_token_1
+      InnerSystem:
+        Intervals:
+          Interval:
+            - WorkDay: 'true'
+              StartTime: '00:00'
+              EndTime: '23:59'
+              Login: login_seller_1
+              Password: password_seller_1
+            - WorkDay: 'false'
+              StartTime: '00:00'
+              EndTime: '23:59'
+              Login: login_seller_1_2
+              Password: password_seller_1_2
+      TasksSettings:
+        SendStock:
+          Name: 01 Передать сток
+          Run: 'true'
+          SetPrice: 'false'
+          SetAmount: 'true'
+          SetAmountType: APIAvailableReservedQty
+          Schedule: 0 0 31 FEB *
+          Emails: my_mail@test.com
+        GetShipments:
+          Name: 02 Получить заказы
+          Run: 'true'
+          Schedule: 0 0 31 FEB *
+          TimeOffset: '+03:00'
+          Emails: my_mail@test.com;my_mail1@test.com
+      _name: seller_name_1
+    - IsActive: 'true'
+      OutSystem:
+        X_Auth_Token: some token 2
+      InnerSystem:
+        Intervals:
+          Interval:
+            - WorkDay: 'true'
+              StartTime: '00:00'
+              EndTime: '23:59'
+              Login: login_seller_2
+              Password: password_seller_2
+            - WorkDay: 'false'
+              StartTime: '00:00'
+              EndTime: '23:59'
+              Login: login_seller_2
+              Password: password_seller_2
+      TasksSettings:
+        SendStock:
+          Name: 01 Передать сток
+          Run: 'true'
+          SetPrice: 'false'
+          SetAmount: 'true'
+          SetAmountType: APIAvailableReservedQty
+          Schedule: 0 0 31 FEB *
+          Emails: my_mail@test.com
+        GetShipments:
+          Name: 02 Получить заказы
+          Run: 'true'
+          Schedule: 0 0 31 FEB *
+          TimeOffset: '+03:00'
+          Emails: my_mail@test.com;my_mail2@test.com
+      _name: seller_name2
