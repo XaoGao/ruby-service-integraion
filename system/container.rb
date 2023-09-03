@@ -11,3 +11,4 @@ class Application < Drt::System::Container
     config.component_dirs.add "app"
   end
 end
+
