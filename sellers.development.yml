@@ -18,7 +18,7 @@ Sellers:
               Password: password_seller_1_2
       TasksSettings:
         SendStock:
-          Name: 01 Передать сток
+          Name: 01 send stock
           Run: 'true'
           SetPrice: 'false'
           SetAmount: 'true'
@@ -26,7 +26,7 @@ Sellers:
           Schedule: 0 0 31 FEB *
           Emails: my_mail@test.com
         GetShipments:
-          Name: 02 Получить заказы
+          Name: 02 get shipments
           Run: 'true'
           Schedule: 0 0 31 FEB *
           TimeOffset: '+03:00'
@@ -50,7 +50,7 @@ Sellers:
               Password: password_seller_2
       TasksSettings:
         SendStock:
-          Name: 01 Передать сток
+          Name: 01 send stock
           Run: 'true'
           SetPrice: 'false'
           SetAmount: 'true'
@@ -58,7 +58,7 @@ Sellers:
           Schedule: 0 0 31 FEB *
           Emails: my_mail@test.com
         GetShipments:
-          Name: 02 Получить заказы
+          Name: 02 get shipments
           Run: 'true'
           Schedule: 0 0 31 FEB *
           TimeOffset: '+03:00'
