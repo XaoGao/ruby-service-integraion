@@ -6,6 +6,7 @@ ruby "3.2.2"
 
 gem "dry-monitor", "~> 1.0", ">= 1.0.1"
 gem "dry-system", "~> 1.0", ">= 1.0.1"
+gem "redis", "~> 5.0", ">= 5.0.7"
 gem "sequel", "~> 5.72"
 gem "sqlite3", "~> 1.6", ">= 1.6.4"
 
