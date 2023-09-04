@@ -5,7 +5,7 @@ Application.register_provider(:db) do
   end
 
   start do
-    db_config = YAML.safe_load(File.read(File.join(Application.root, "lib", "database", "database.yml")),
+    db_config = YAML.safe_load_file(File.join(Application.root, "lib", "database", "database.yml"),
                                symbolize_names: true)
 
     DB = Sequel.connect(db_config[Application.env])
