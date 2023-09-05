@@ -1,5 +1,3 @@
-module Models
-  class Merchant < Sequel::Model(DB)
-  end
+class Merchant < Sequel::Model(DB)
 end
 
