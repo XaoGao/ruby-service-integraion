@@ -7,4 +7,3 @@ Application.register_provider(:logger) do
     register(:logger, Logger.new($stdout))
   end
 end
-

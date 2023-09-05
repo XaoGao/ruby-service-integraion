@@ -16,4 +16,3 @@ Sequel.migration do
     drop_table(:merchants)
   end
 end
-

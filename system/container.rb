@@ -12,10 +12,11 @@ class Application < Dry::System::Container
     config.component_dirs.add "app"
 
     path = File.join(root, "app")
-    dirs = Dir.entries(path).select { |entry| File.directory?(File.join(path, entry)) and !(entry =='.' || entry == '..') }.to_a
+    dirs = Dir.entries(path).select do |entry|
+      File.directory?(File.join(path, entry)) and ![".", ".."].include?(entry)
+    end.to_a
     dirs.each do |dir|
       config.component_dirs.add "app/#{dir}"
     end
   end
 end
-

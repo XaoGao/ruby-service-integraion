@@ -11,4 +11,3 @@ module Models
     end
   end
 end
-

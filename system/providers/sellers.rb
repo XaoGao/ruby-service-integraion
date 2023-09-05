@@ -9,4 +9,3 @@ Application.register_provider(:sellers) do
     register(:sellers, sellers)
   end
 end
-
