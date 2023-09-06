@@ -33,7 +33,7 @@ Metrics/ModuleLength:
 Metrics/BlockLength:
   Exclude:
     - "**/*_spec.rb"
-    - "lib/db/migrations/*.rb"
+    - "lib/database/migrations/*.rb"
 
 Metrics/CyclomaticComplexity:
   Max: 10
