@@ -1,66 +1,66 @@
-Sellers:
-  Seller:
-    - IsActive: 'true'
-      OutSystem:
-        X_Auth_Token: some_token_1
-      InnerSystem:
-        Intervals:
-          Interval:
-            - WorkDay: 'true'
-              StartTime: '00:00'
-              EndTime: '23:59'
-              Login: login_seller_1
-              Password: password_seller_1
-            - WorkDay: 'false'
-              StartTime: '00:00'
-              EndTime: '23:59'
-              Login: login_seller_1_2
-              Password: password_seller_1_2
-      TasksSettings:
-        SendStock:
-          Name: 01 send stock
-          Run: 'true'
-          SetPrice: 'false'
-          SetAmount: 'true'
-          SetAmountType: APIAvailableReservedQty
-          Schedule: 0 0 31 FEB *
-          Emails: my_mail@test.com
-        GetShipments:
-          Name: 02 get shipments
-          Run: 'true'
-          Schedule: 0 0 31 FEB *
-          TimeOffset: '+03:00'
-          Emails: my_mail@test.com;my_mail1@test.com
-      _name: seller_name_1
-    - IsActive: 'true'
-      OutSystem:
-        X_Auth_Token: some token 2
-      InnerSystem:
-        Intervals:
-          Interval:
-            - WorkDay: 'true'
-              StartTime: '00:00'
-              EndTime: '23:59'
-              Login: login_seller_2
-              Password: password_seller_2
-            - WorkDay: 'false'
-              StartTime: '00:00'
-              EndTime: '23:59'
-              Login: login_seller_2
-              Password: password_seller_2
-      TasksSettings:
-        SendStock:
-          Name: 01 send stock
-          Run: 'true'
-          SetPrice: 'false'
-          SetAmount: 'true'
-          SetAmountType: APIAvailableReservedQty
-          Schedule: 0 0 31 FEB *
-          Emails: my_mail@test.com
-        GetShipments:
-          Name: 02 get shipments
-          Run: 'true'
-          Schedule: 0 0 31 FEB *
-          TimeOffset: '+03:00'
-          Emails: my_mail@test.com;my_mail2@test.com
-      _name: seller_name2
+sellers:
+  seller:
+  - is_active: 'true'
+    out_system:
+      x_auth_token: some_token_1
+    inner_system:
+      intervals:
+        interval:
+        - work_day: 'true'
+          start_time: '00:00'
+          end_time: '23:59'
+          login: login_seller_1
+          password: password_seller_1
+        - work_day: 'false'
+          start_time: '00:00'
+          end_time: '23:59'
+          login: login_seller_1_2
+          password: password_seller_1_2
+    tasks_settings:
+      send_stock:
+        name: 01 send stock
+        run: 'true'
+        set_price: 'false'
+        set_amount: 'true'
+        set_amount_type: APIAvailableReservedQty
+        schedule: 0 0 31 FEB *
+        emails: my_mail@test.com
+      get_shipments:
+        name: 02 get shipments
+        run: 'true'
+        schedule: 0 0 31 FEB *
+        time_offset: "+03:00"
+        emails: my_mail@test.com;my_mail1@test.com
+    _name: seller_name_1
+  - is_active: 'true'
+    out_system:
+      x_auth_token: some token 2
+    inner_system:
+      intervals:
+        interval:
+        - work_day: 'true'
+          start_time: '00:00'
+          end_time: '23:59'
+          login: login_seller_2
+          password: password_seller_2
+        - work_day: 'false'
+          start_time: '00:00'
+          end_time: '23:59'
+          login: login_seller_2
+          password: password_seller_2
+    tasks_settings:
+      send_stock:
+        name: 01 send stock
+        run: 'true'
+        set_price: 'false'
+        set_amount: 'true'
+        set_amount_type: APIAvailableReservedQty
+        schedule: 0 0 31 FEB *
+        emails: my_mail@test.com
+      get_shipments:
+        name: 02 get shipments
+        run: 'true'
+        schedule: 0 0 31 FEB *
+        time_offset: "+03:00"
+        emails: my_mail@test.com;my_mail2@test.com
+    _name: seller_name2
