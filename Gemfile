@@ -5,6 +5,7 @@ source "https://rubygems.org"
 ruby "3.2.2"
 
 gem "aasm", "~> 5.5"
+gem "dotenv", "~> 2.8", ">= 2.8.1"
 gem "dry-monitor", "~> 1.0", ">= 1.0.1"
 gem "dry-system", "~> 1.0", ">= 1.0.1"
 gem "redis", "~> 5.0", ">= 5.0.7"
