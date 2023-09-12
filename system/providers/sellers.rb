@@ -4,7 +4,9 @@ Application.register_provider(:sellers) do
   end
 
   start do
-    sellers = YAML.safe_load_file(File.join(Application.root, "sellers.#{Application.env}.yml"), symbolize_names: true)
+    config = YAML.safe_load_file(File.join(Application.root, "sellers.#{Application.env}.yml"), symbolize_names: true)
+
+    sellers = Settings::Config.new(config)
 
     register(:sellers, sellers)
   end

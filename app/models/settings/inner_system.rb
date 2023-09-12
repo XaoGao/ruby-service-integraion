@@ -6,7 +6,7 @@ module Settings
       raise Error "inner_system can not be nil" if inner_system.nil?
       raise Error "intervalis can not be nil" if inner_system[:intervals].nil?
 
-      @intervals = inner_system[:intervals].map { |i| Interval.new(i) }
+      @intervals = inner_system[:intervals][:interval].map { |i| Interval.new(i) }
     end
   end
 end
