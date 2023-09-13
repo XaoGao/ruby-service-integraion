@@ -16,10 +16,29 @@ module ServiceIntegration
 	end
       end
 
+      class Run < Dry::CLI::Command
+        desc "Run project"
+
+	def call(*)
+	  ApplicationController.run!
+	end
+      end
+
+      class Console < Dry::CLI::Command
+        desc "Run project in irb"
+
+        def call(*)
+          require "irb"
+          ARGV.clear
+          IRB.start
+        end
+      end
+
       register "version", Version
+      register "run", Run
+      register "console", Console
     end
   end
 end
 
 Dry::CLI.new(ServiceIntegration::CLI::Commands).call
-
