@@ -6,6 +6,7 @@ ruby "3.2.2"
 
 gem "aasm", "~> 5.5"
 gem "dotenv", "~> 2.8", ">= 2.8.1"
+gem "dry-cli", "~> 1.0"
 gem "dry-monitor", "~> 1.0", ">= 1.0.1"
 gem "dry-system", "~> 1.0", ">= 1.0.1"
 gem "puma", "~> 6.3", ">= 6.3.1"

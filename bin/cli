@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/service_integration"
+require "dry/cli"
+
+module ServiceIntegration
+  module CLI
+    module Commands
+      extend Dry::CLI::Registry
+
+      class Version < Dry::CLI::Command
+        desc "Print version"
+
+	def call(*)
+	  puts "1.0"
+	end
+      end
+
+      register "version", Version
+    end
+  end
+end
+
+Dry::CLI.new(ServiceIntegration::CLI::Commands).call
+
