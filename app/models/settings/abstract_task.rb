@@ -3,10 +3,10 @@ module Settings
     attr_reader :name, :run, :schedule, :emails
 
     def initialize(task)
-      @name = name
-      @run = run
-      @schedule = schedule
-      @emails = emails
+      @name = task[:name]
+      @run = task[:run]
+      @schedule = task[:schedule]
+      @emails = task[:emails]
     end
   end
 end
