@@ -9,7 +9,11 @@ module Settings
       @name = seller[:_name]
       @out_system = OutSystem.new(seller[:out_system])
       @inner_system = InnerSystem.new(seller[:inner_system])
-      @tasks_settings = TaskSettings.new(seller[:tasks_settings])
+      @tasks_settings = TasksSettings.new(seller[:tasks_settings])
+    end
+
+    def active?
+      is_active == "true"
     end
   end
 end

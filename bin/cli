@@ -34,9 +34,18 @@ module ServiceIntegration
         end
       end
 
+      class Seed < Dry::CLI::Command
+        desc "Run seed data to db"
+
+        def call(*)
+          require_relative "../lib/database/seed"
+        end
+      end
+
       register "version", Version
       register "run", Run
       register "console", Console
+      register "seed", Seed
     end
   end
 end
