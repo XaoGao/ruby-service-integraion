@@ -23,12 +23,12 @@ sellers:
         set_price: 'false'
         set_amount: 'true'
         set_amount_type: APIAvailableReservedQty
-        schedule: 0 0 31 FEB *
+        schedule: '* * * * *'
         emails: my_mail@test.com
       get_shipments:
         name: 02 get shipments
         run: 'true'
-        schedule: 0 0 31 FEB *
+        schedule: '* * * * *'
         time_offset: "+03:00"
         emails: my_mail@test.com;my_mail1@test.com
     _name: seller_name_1
@@ -55,12 +55,12 @@ sellers:
         set_price: 'false'
         set_amount: 'true'
         set_amount_type: APIAvailableReservedQty
-        schedule: 0 0 31 FEB *
+        schedule: '* * * * *'
         emails: my_mail@test.com
       get_shipments:
         name: 02 get shipments
         run: 'true'
-        schedule: 0 0 31 FEB *
-        time_offset: "+03:00"
+        schedule: '* * * * *'
+        time_offsetv: "+03:00"
         emails: my_mail@test.com;my_mail2@test.com
-    _name: seller_name2
+    _name: seller_name_2

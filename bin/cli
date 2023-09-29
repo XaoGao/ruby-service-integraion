@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative "../lib/service_integration"
 require "dry/cli"
 
 module ServiceIntegration
@@ -20,6 +19,7 @@ module ServiceIntegration
         desc "Run project"
 
 	def call(*)
+          require_relative "../lib/service_integration"
 	  ApplicationController.run!
 	end
       end
@@ -28,6 +28,7 @@ module ServiceIntegration
         desc "Run project in irb"
 
         def call(*)
+          require_relative "../lib/service_integration"
           require "irb"
           ARGV.clear
           IRB.start
@@ -38,6 +39,7 @@ module ServiceIntegration
         desc "Run seed data to db"
 
         def call(*)
+          require_relative "../lib/service_integration"
           require_relative "../lib/database/seed"
         end
       end
