@@ -1,6 +1,7 @@
 require_relative "../lib/service_integration"
 require "factory_bot"
 require "database_cleaner-sequel"
+require "webmock/rspec"
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

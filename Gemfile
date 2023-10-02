@@ -26,6 +26,8 @@ end
 group :test do
   gem "database_cleaner-sequel", "~> 2.0", ">= 2.0.2"
   gem "factory_bot", "~> 6.3"
+  gem "httparty", "~> 0.21.0"
   gem "rspec", "~> 3.12"
   gem "simplecov", require: false
+  gem "webmock", "~> 3.19", ">= 3.19.1"
 end

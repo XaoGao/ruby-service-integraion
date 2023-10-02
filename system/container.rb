@@ -15,6 +15,7 @@ class Application < Dry::System::Container
     dirs = Dir.entries(path).select do |entry|
       File.directory?(File.join(path, entry)) and ![".", ".."].include?(entry)
     end.to_a
+
     dirs.each do |dir|
       config.component_dirs.add "app/#{dir}"
     end

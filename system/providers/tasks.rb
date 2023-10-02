@@ -9,6 +9,8 @@ Application.register_provider(:tasks) do
       config.redis = { url: ENV.fetch("REDIS_URL") }
     end
 
+    return if Application.env == :test
+
     target.start :sellers
     target.start :logger
 
